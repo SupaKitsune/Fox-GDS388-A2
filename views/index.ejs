@@ -1,0 +1,21 @@
+<% include header %>
+
+<% if(games.length){ %>
+	<% games.forEach(function(game) { %>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="text-muted pull-right">
+					<%= game.published %>
+				</div>
+				<%= game.title %>
+			</div>
+			<div class="panel-body">
+				<%= game.body %>
+			</div>
+		</div>
+	<% }) %>
+<% } else { %>
+	No games!<br/><a href="/new-entry">Add a game?</a>
+<% } %>
+
+<% include footer %>
