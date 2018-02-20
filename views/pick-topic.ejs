@@ -1,7 +1,7 @@
 <% include header %>
 
-<% if(topics.length){ %>
-	<% topics.forEach(function(topic) { %>
+<% if(selection.length){ %>
+	<% selection.forEach(function(topic) { %>
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<div class="text-muted pull-right">
@@ -15,7 +15,7 @@
 		</div>
 	<% }) %>
 <% } else { %>
-	No topics!<br/><a href="/new-entry">Add a topic?</a>
+	No topics!<br/><a href="/new-topic">Add a topic?</a>
 <% } %>
 
 <% include footer %>
